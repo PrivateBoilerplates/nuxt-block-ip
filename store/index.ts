@@ -14,9 +14,6 @@ type RootState = ReturnType<typeof state>
 export const actions: ActionTree<RootState, RootState> = {
   nuxtServerInit({ dispatch }, { req }) {
     console.log(req.headers['x-forwarded-for'].split(',').pop())
-    console.log(req.connection.remoteAddress)
-    console.log(req.socket.remoteAddress)
-    console.log(req.connection.socket.remoteAddress)
 
     // const ip = req.connection.remoteAddress
     // const { data } = await $axios.$get(
